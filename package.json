@@ -1,0 +1,22 @@
+{
+  "name": "cy_cucumber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "google": "cypress run --headed --spec 'cypress/e2e/Google.feature' --no-exit",
+    "tehnomanija": "cypress run --headed --spec 'cypress/e2e/Tehnomanija.feature' --no-exit"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^12.12.0"
+  },
+  "devDependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "./cypress/e2e/"
+  }
+}
